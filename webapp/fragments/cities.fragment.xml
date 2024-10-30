@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+                         xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+<Select items="{To_Supplier/CITY}">
+                        <items>
+                            <core:Item key="{To_Supplier/CITY}" text="{To_Supplier/CITY}" />
+                        </items>
+                    </Select>
+                    <ComboBox items="{To_Supplier/CITY}">
+                        <items>
+                            <core:Item key="{To_Supplier/CITY}" text="{To_Supplier/CITY}" />
+                        </items>
+                    </ComboBox>
+                    <MultiComboBox items="{To_Supplier/CITY}">
+                        <items>
+                            <core:Item key="{To_Supplier/CITY}" text="{To_Supplier/CITY}" />
+                        </items>
+                    </MultiComboBox>
+                    
+</core:FragmentDefinition>                        
+ 

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "4.0"
+metadata:
+  name: fiorilikeapp
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: FK_S4Hana
+          url: http://stsrvr.mynetgear.com:8021/
+          client: '800'
+        app:
+          name: ZZ1_MT_FK
+          description: my first fiori app
+          package: $TMP
+          transport: ''
+        exclude:
+          - /test/
